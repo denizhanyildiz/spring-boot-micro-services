@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("api/department")
+@RequestMapping("api/departments")
 public class DepartmentController {
 
     private DepartmentServiceImpl departmentService;
