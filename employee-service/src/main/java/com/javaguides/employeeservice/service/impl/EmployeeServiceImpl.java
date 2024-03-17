@@ -3,6 +3,7 @@ package com.javaguides.employeeservice.service.impl;
 import com.javaguides.employeeservice.dto.APIResponseDto;
 import com.javaguides.employeeservice.dto.DepartmentDto;
 import com.javaguides.employeeservice.dto.EmployeeDto;
+import com.javaguides.employeeservice.dto.OrganizationDto;
 import com.javaguides.employeeservice.entity.Employee;
 import com.javaguides.employeeservice.exception.EmailAlreadyExistsException;
 import com.javaguides.employeeservice.exception.ResourceNotFoundException;
@@ -63,13 +64,22 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .bodyToMono(DepartmentDto.class)
                 .block();
 
+
+
 //        DepartmentDto departmentDto = apiClient.getDepartmentByDepartmentCode(employee.getDepartmentCode());
+
+        OrganizationDto organizationDto = webClient.get().uri("http://localhost:8083/api/organizations/" + employee.getOrganizationCode())
+                .retrieve()
+                .bodyToMono(OrganizationDto.class)
+                .block();
+
 
         EmployeeDto employeeDto = AutoEmployeeMapper.MAPPER.mapToEmployeeDto(employee);
 
         APIResponseDto apiResponseDto = new APIResponseDto();
         apiResponseDto.setEmployeeDto(employeeDto);
         apiResponseDto.setDepartmentDto(departmentDto);
+        apiResponseDto.setOrganizationDto(organizationDto);
 
         return apiResponseDto;
     }
