@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("api/organizations")
 @AllArgsConstructor
+@CrossOrigin("*")
 public class OrganizationController {
 
     private final OrganizationService organizationService;

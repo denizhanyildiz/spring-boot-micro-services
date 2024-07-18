@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @AllArgsConstructor
 @RequestMapping("api/departments")
+@CrossOrigin("*")
 public class DepartmentController {
 
     private DepartmentServiceImpl departmentService;
