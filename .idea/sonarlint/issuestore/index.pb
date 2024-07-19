@@ -29,3 +29,11 @@ Napi-gateway/src/main/java/com/javaguides/apigateway/ApiGatewayApplication.java
 ]service-registry/src/main/java/net/javaguides/serviceregistry/ServiceRegistryApplication.java,3/b/3bc77802dbd12751fc8cba5e1f53829568dfbde7
 K
 react-frontend/src/index.js,b/7/b770bdb7560e29881843754e77edd61977a2867d
+J
+department-service/pom.xml,4/3/435a299772071101395e50f9c97404ba87b4f0c3
+H
+service-registry/pom.xml,c/8/c838103466e7455490125db06ce61e4ea301ce49
+E
+config-server/pom.xml,a/2/a2f9618c8ad821b143a07a29a9805fcb0b2df470
+„
+Tconfig-server/src/main/java/net/javaguides/configserver/ConfigServerApplication.java,7/b/7bb61e7b497b4b17c4c7bf04750aaef511e083ce
